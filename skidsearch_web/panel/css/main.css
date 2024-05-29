@@ -1,0 +1,311 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    background: #222;
+    margin: 0;
+}
+.panel {
+ margin-bottom:10px;
+ background-color:#222222;
+ border:1px solid transparent;
+ border-radius:10px;
+ -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.05);
+ box-shadow:0 1px 1px rgba(0,0,0,0.05)
+}
+.panel-body {
+ padding-top:10px;
+ padding-bottom:10px;
+}
+.panel-body > p {
+ color: #fff
+}
+.panel-heading {
+ padding:10px 15px;
+ border-bottom:1px solid transparent;
+ border-top-right-radius:10px;
+ border-top-left-radius:10px;
+}
+.panel-heading>.dropdown .dropdown-toggle {
+ color:inherit
+}
+.panel-title {
+ margin-top:0;
+ margin-bottom:0;
+ font-size:16px;
+ color:inherit
+}
+.panel-title>a,.panel-title>small,.panel-title>.small,.panel-title>small>a,.panel-title>.small>a {
+ color:inherit
+}
+.wrapper {
+    text-align: center;
+}
+
+.title {
+    font-size: 2em;
+    position: relative;
+    margin: 0 auto 1em;
+    padding: 1em 1em .25em 1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+.title:after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 240px;
+    height: 4px;
+    margin-left: -120px;
+    content: '';
+    background-color: #fff;
+}
+
+.col-xs-1,.col-sm-1,.col-md-1,.col-lg-1,.col-xs-2,.col-sm-2,.col-md-2,.col-lg-2,.col-xs-3,.col-sm-3,.col-md-3,.col-lg-3,.col-xs-4,.col-sm-4,.col-md-4,.col-lg-4,.col-xs-5,.col-sm-5,.col-md-5,.col-lg-5,.col-xs-6,.col-sm-6,.col-md-6,.col-lg-6,.col-xs-7,.col-sm-7,.col-md-7,.col-lg-7,.col-xs-8,.col-sm-8,.col-md-8,.col-lg-8,.col-xs-9,.col-sm-9,.col-md-9,.col-lg-9,.col-xs-10,.col-sm-10,.col-md-10,.col-lg-10,.col-xs-11,.col-sm-11,.col-md-11,.col-lg-11,.col-xs-12,.col-sm-12,.col-md-12,.col-lg-12 {
+    position:relative;
+    margin: auto;
+    padding-top: 2px;
+    padding-bottom: px;
+}
+
+.form-control input[placeholder] {
+    color: #fff;
+}
+
+.form-control {
+    color: purple;
+    width: 65%;
+    background-color: #191919;
+    border: solid 2px #2e2e2e;
+}
+
+.form-control:focus, .form-control:hover {
+    border-bottom: solid 2px magenta !important;
+    box-shadow: none;
+}
+
+.panel-info > .panel-heading > .panel-title {
+    font-size: 17px;
+}
+
+.panel-info> .panel-heading, .result > .panel-heading {
+    background: #191919 !important;
+    border-bottom: 2px solid purple !important;
+}
+
+.panel-info {
+    color: #fff;
+    font-size: 20px;
+    background: #202020;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
+    border: 1000px;
+}
+
+.search {
+    max-width: 475px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search label, .search input, .search select, .search button {
+    font-size: 17px;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.btn-success {
+    background-color: magenta;
+    border-color: purple;
+}
+
+.btn-success:hover {
+    background-color: purple;
+    border-color: purple;
+}
+
+/* Clip text element */
+.clip-text {
+    font-size: 6em;
+    font-weight: bold;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    margin: .25em;
+    padding: .5em .75em;
+    text-align: center;
+    /* Color fallback */
+    color: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.clip-text:before,
+.clip-text:after {
+    position: absolute;
+    content: '';
+}
+
+/* Background */
+.clip-text:before {
+    z-index: -2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: inherit;
+}
+
+/* Text Background (black zone) */
+.clip-text:after {
+    position: absolute;
+    z-index: -1;
+    top: .125em;
+    right: .125em;
+    bottom: .125em;
+    left: .125em;
+    background-color: #222;
+}
+
+/* Change the background position to display letter when the black zone isn't here */
+.clip-text--no-textzone:before {
+    background-position: -.65em 0;
+}
+
+.clip-text--no-textzone:after {
+    content: none;
+}
+
+/* Use Background-size cover for photo background and no-repeat background */
+.clip-text--cover,
+.clip-text--cover:before {
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+            background-size: cover;
+  background-position: 50% 50%;
+}
+
+.search-results {
+    color: magenta !important;
+}
+
+.search-results p {
+    color: #ffffff !important;
+    font-size: 18px;
+    text-align: ;
+}
+
+.converter-results {
+    color: magenta !important;
+}
+
+.converter-results p {
+    color: #ffffff !important;
+    font-size: 18px;
+    text-align: ;
+}
+
+.steam-results {
+    color: magenta !important;
+}
+
+.steam-results p {
+    color: #ffffff !important;
+    font-size: 18px;
+    text-align: ;
+}
+
+.geo-ip-results {
+    color: magenta !important;
+}
+
+.geo-ip-results p {
+    color: #ffffff !important;
+    font-size: 18px;
+    text-align: ;
+}
+
+.vpncheck-results {
+    color: magenta !important;
+}
+
+.vpncheck-results p {
+    color: #ffffff !important;
+    font-size: 18px;
+    text-align: ;
+}
+
+.header {
+    background-image: url(https://storage.pixteller.com/designs/designs-images/2017-12-26/11/galaxies-lol-1-5a42137ae6185.png);
+}
+.navtop {
+  background-color: #2f3947;
+  height: 60px;
+  width: 100%;
+  border: 0;
+}
+.navtop div {
+  display: flex;
+  margin: 0 auto;
+  width: 1000px;
+  height: 100%;
+}
+.navtop div h1, .navtop div a {
+  display: inline-flex;
+  align-items: center;
+}
+.navtop div h1 {
+  flex: 1;
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+  color: #eaebed;
+  font-weight: normal;
+}
+.navtop div a {
+  padding: 0 20px;
+  text-decoration: none;
+  color: #c1c4c8;
+  font-weight: bold;
+}
+.navtop div a i {
+  padding: 2px 8px 0 0;
+}
+.navtop div a:hover {
+  color: #eaebed;
+}
+.removals {
+ max-width:780px;
+ margin-top:30px;
+ margin-left:auto;
+ margin-right:auto;
+}
+a:link
+{
+    color: magenta; 
+    text-decoration: none;
+}
+a:visited
+{
+    color: magenta; 
+    text-decoration: none;
+}
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>SkidSearch - Register</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<link href="css/main.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<nav class="navtop">
+            <div>
+                <h1></h1>
+	            <a href="https://discord.gg/bfn5ZpShaU"><i class="fab fa-discord"></i>Discord</a>
+                    <a href="faq.php"><i class="fas fa-info-circle"></i>FAQ</a>
+                    <a href="faq.php"><i class="fas fa-info-circle"></i>IP Removals</a>
+	            <a href="login.php"><i class="fas fa-sign-in-alt"></i>Login</a>
+        	</div>
+	    </nav>
+        <div class="wrapper">
+            <div class="clip-text header"><a href="index.php">SKIDSEARCH</a></div>
+
+		<div class="register">
+			<h1>Register</h1>
+			<form action="register.php" method="post" autocomplete="off">
+				<label for="username">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="username" placeholder="Username" id="username" required>
+				<label for="password">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password" name="password" placeholder="Password" id="password" required>
+				<label for="email">
+					<i class="fas fa-envelope"></i>
+				</label>
+				<input type="email" name="email" placeholder="Email (You will be required to verify!)" id="email" required>
+        <!--<label for="referrer">
+					<i class="fas fa-at"></i>
+				</label>
+				<input type="text" name="referrer" placeholder="Who Referred You?" id="referrer">!-->
+				<p text-color="#9e19e6">Already have an account? <a href="login.php">Login!</p></a>
+				<input type="submit" value="Register">
+			</form>
+		</div>
+	</body>
+</html>
+

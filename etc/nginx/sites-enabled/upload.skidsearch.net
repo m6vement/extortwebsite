@@ -1,0 +1,49 @@
+##
+# UPLOAD.SKIDSEARCH.NET NGINX CONFIG
+##
+
+server {
+        # HTTP configuration
+        listen 80;
+        listen [::]:80;
+        server_name upload.skidsearch.net;
+        return 302 https://$server_name$request_uri;
+}
+
+server {
+        # SSL configuration
+        listen 443 ssl http2;
+        listen [::]:443 ssl http2;
+        ssl                     on;
+        ssl_certificate         /etc/ssl/certs/cert.pem;
+        ssl_certificate_key     /etc/ssl/private/key.pem;
+        ssl_client_certificate  /etc/ssl/certs/cloudflare.crt;
+        ssl_verify_client       off;
+
+        server_name upload.skidsearch.net;
+
+        root /var/www/upload.skidsearch.net/html;
+        index index.html index.htm index.nginx-debian.html index.php;
+
+	# Enable Content-Security-Policy Header
+	# add_header Content-Security-Policy "default-src 'self';";
+
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                try_files $uri $uri/ =404;
+        }
+
+        # pass PHP scripts to FastCGI server
+        location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+                # With php-fpm (or other unix sockets):
+                fastcgi_pass unix:/var/run/php/php7.3-fpm.sock;
+        }
+
+        # deny access to .htaccess files, if Apache's document root
+        # concurs with nginx's one
+        location ~ /\.ht {
+                deny all;
+        }
+}
